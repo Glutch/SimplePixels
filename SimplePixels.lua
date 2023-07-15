@@ -39,7 +39,7 @@ function SpellReady(i)
     local start, duration, enable = GetActionCooldown(i)
     local current_time = GetTime()
     local time_left = duration - (current_time - start)
-    return time_left <= 2 and 1 or 0
+    return time_left <= 1 and 1 or 0
 end
 
 function GetTargetHealthPct()
