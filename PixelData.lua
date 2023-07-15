@@ -1,4 +1,4 @@
-local pixels = {
+pixels = {
     {
         name = "1. Health",
         color = function()
