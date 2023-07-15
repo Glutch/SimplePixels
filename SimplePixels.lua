@@ -9,6 +9,16 @@ function to_color(number)
     return {red, green, blue}
 end
 
+function GetDebuff(debuff_name)
+    for i=1,40 do
+        local name, rank, iconTexture, count, debuffType, duration, timeLeft = UnitDebuff("target", i); 
+        if name == debuff_name and duration ~=nil then
+          return 1
+        end
+    end
+    return 0
+end
+
 function GetBuffs(buff)
     for i = 1, 20 do
         local b = UnitBuff("player", i);
@@ -27,7 +37,9 @@ end
 
 function SpellReady(i)
     local start, duration, enable = GetActionCooldown(i)
-    return start == 0 and 1 or 0
+    local current_time = GetTime()
+    local time_left = duration - (current_time - start)
+    return time_left <= 2 and 1 or 0
 end
 
 function GetTargetHealthPct()

@@ -117,6 +117,12 @@ pixels = {
             return to_color(SpellReady(12))
         end,
     },
+    {
+        name = "20. Target Debuff Winter's Chill",
+        color = function()
+            return to_color(GetDebuff("Winter's Chill"))
+        end,
+    },
 }
 
 
