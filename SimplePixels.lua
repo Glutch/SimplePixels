@@ -1,30 +1,5 @@
-local PIXEL_SIZE = 1.5
-local uiScale = UIParent:GetEffectiveScale() -- use this function to get the effective UI scale
-local screenWidth, screenHeight = GetScreenWidth() * uiScale, GetScreenHeight() * uiScale -- scale the screen size
-local maxPixelsWidth = math.floor(screenWidth / PIXEL_SIZE)
-local maxPixelsHeight = math.floor(screenHeight / PIXEL_SIZE)
-
-for i, pixel in ipairs(pixels) do
-    local row = math.floor((i - 1) / maxPixelsWidth)
-    local col = (i - 1) % maxPixelsWidth
-
-    if row < maxPixelsHeight then  -- Check to avoid overflowing the screen height
-        local pixelFrame = CreateFrame("Frame", nil, UIParent)
-        pixelFrame:SetPoint("TOPLEFT", col * PIXEL_SIZE / uiScale, -row * PIXEL_SIZE / uiScale)  -- account for UI scale in position
-        pixelFrame:SetSize(PIXEL_SIZE / uiScale, PIXEL_SIZE / uiScale)  -- account for UI scale in size
-
-        local pixelTexture = pixelFrame:CreateTexture()
-        pixelTexture:SetAllPoints()
-
-        pixelFrame:SetScript("OnUpdate", function()
-            local color = pixel.color()
-            local r = color[1]
-            local g = color[2]
-            local b = color[3]
-            pixelTexture:SetColorTexture(r / 256, g / 256, b / 256, 1)
-        end)
-    end
-end
+local frame = CreateFrame("Frame", nil, UIParent)
+local PIXEL_SIZE = 2
 
 function to_color(number)
     local red = math.floor(number / 65536) % 256
@@ -59,6 +34,14 @@ function CombatStatus()
     return UnitAffectingCombat("player") and 1 or 0
 end
 
+function IsTargetDead(string)
+    if UnitIsDead(string) then
+        return 1
+    else 
+        return 0
+    end
+end
+
 function SpellReady(i)
     local start, duration, enable = GetActionCooldown(i)
     local current_time = GetTime()
@@ -91,5 +74,25 @@ function isInRange()
 end
 
 
+local screenWidth = UIParent:GetWidth()
+local columns = math.floor(screenWidth / PIXEL_SIZE)
 
-    
+for i, pixel in ipairs(pixels) do
+    local column = ((i - 1) % columns) + 1
+    local row = math.floor((i - 1) / columns) + 1
+
+    local pixelFrame = CreateFrame("Frame", nil, UIParent)
+    pixelFrame:SetPoint("TOPLEFT", (column - 1) * PIXEL_SIZE, -(row - 1) * PIXEL_SIZE)
+    pixelFrame:SetSize(PIXEL_SIZE, PIXEL_SIZE)
+
+    local pixelTexture = pixelFrame:CreateTexture()
+    pixelTexture:SetAllPoints()
+
+    pixelFrame:SetScript("OnUpdate", function()
+        local color = pixel.color()
+        local r = color[1]
+        local g = color[2]
+        local b = color[3]
+        pixelTexture:SetColorTexture(r / 256, g / 256, b / 256, 1)
+    end)
+end

@@ -123,1632 +123,1638 @@ pixels = {
             return to_color(GetDebuff("Winter's Chill"))
         end,
     },
+    {
+        name = "21. Dead check",
+        color = function()
+            return to_color(IsTargetDead("target"))
+        end,
+    },
 }
 
 
 
 
--- för att testa pixel perfectness
+--för att testa pixel perfectness
 
--- local pixels = {
---     {
---         name = "1. Health",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "2. Mana",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "3. TargetHealth",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "4. Range",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "5. Combat",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "6. Frost Armor",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "7. Arcane Intellect",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "8. Fireball",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
---     {
---         name = "9. Frost Nova",
---         color = function()
---             return {0, 0, 0}
---         end,
---     },
---     {
---         name = "10. Fire Blast",
---         color = function()
---             return {255, 255, 255}
---         end,
---     },
--- }
+--[[ pixels = {
+    {
+        name = "1. Health",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "2. Mana",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "3. TargetHealth",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "4. Range",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "5. Combat",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "6. Frost Armor",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "7. Arcane Intellect",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "8. Fireball",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+    {
+        name = "9. Frost Nova",
+        color = function()
+            return {0, 0, 0}
+        end,
+    },
+    {
+        name = "10. Fire Blast",
+        color = function()
+            return {255, 255, 255}
+        end,
+    },
+} ]]
