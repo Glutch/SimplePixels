@@ -1,0 +1,9 @@
+## Interface: 100105
+## Title : SimplePixels
+## Notes: An addon that allows good stuff 2 happen
+## Author: Glutch
+## Version: 1.0
+## Dependencies: 
+## SavedVariablesPerCharacter: SimplePixelsPrefs
+
+SimplePixels.lua
