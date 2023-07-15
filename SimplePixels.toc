@@ -6,4 +6,5 @@
 ## Dependencies: 
 ## SavedVariablesPerCharacter: SimplePixelsPrefs
 
+PixelData.lua
 SimplePixels.lua
