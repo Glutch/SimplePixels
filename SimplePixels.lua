@@ -5,7 +5,50 @@ function to_color(number)
     local red = math.floor(number / 65536) % 256
     local green = math.floor(number / 256) % 256
     local blue = number % 256
-    return {red, green, blue}
+    return { red, green, blue }
+end
+
+function to_color_array(input, number)
+    local result = {}
+    for i = 1, #input do
+        local ascii = string.byte(input, i)
+        local red = math.floor(ascii / 65536) % 256
+        local green = math.floor(ascii / 256) % 256
+        local blue = ascii % 256
+        table.insert(result, red)
+        table.insert(result, green)
+        table.insert(result, blue)
+    end
+
+    local red = math.floor(number / 65536) % 256
+    local green = math.floor(number / 256) % 256
+    local blue = number % 256
+    table.insert(result, red)
+    table.insert(result, green)
+    table.insert(result, blue)
+    
+    return result
+end
+
+
+function interpret_colors(colors)
+    local numColors = #colors / 3
+
+    local asciiChars = ""
+    for i = 1, numColors - 1 do
+        local red = colors[(i - 1) * 3 + 1]
+        local green = colors[(i - 1) * 3 + 2]
+        local blue = colors[(i - 1) * 3 + 3]
+        local ascii = red * 65536 + green * 256 + blue
+        asciiChars = asciiChars .. string.char(ascii)
+    end
+
+    local red = colors[#colors - 2]
+    local green = colors[#colors - 1]
+    local blue = colors[#colors]
+    local integerValue = red * 65536 + green * 256 + blue
+
+    return asciiChars, integerValue
 end
 
 function GetDebuff(debuff_name)
@@ -91,7 +134,6 @@ function GetSpellColors()
     
     -- compute pixels count color and insert it as the first element
     local pixelsCountColor = to_color(#pixels)
-    print(#pixels)
     table.insert(pixels, 1,{
       name = "1. Count",
       color = function() return pixelsCountColor end,
@@ -101,7 +143,6 @@ function GetSpellColors()
 end
   
 GetSpellColors()
-
 
 local screenWidth = UIParent:GetWidth()
 local columns = math.floor(screenWidth / PIXEL_SIZE)
