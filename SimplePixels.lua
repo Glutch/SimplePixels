@@ -73,6 +73,35 @@ function isInRange()
     end
 end
 
+function GetSpellColors()
+    -- Work in progress, todo: fix so values can be used in read
+    for i = 1, 12 do
+      local type, id = GetActionInfo(i)
+      if type == "spell" then
+        local name = GetSpellInfo(id)
+        local color = to_color(id)
+        if name and color then
+          table.insert(pixels, {
+            name = i .. ", " .. name,
+            color = function() return color end,
+          })
+        end
+      end
+    end
+    
+    -- compute pixels count color and insert it as the first element
+    local pixelsCountColor = to_color(#pixels)
+    print(#pixels)
+    table.insert(pixels, {
+      name = "0. Count",
+      color = function() return pixelsCountColor end,
+    })
+  
+    return pixels
+end
+  
+GetSpellColors()
+
 
 local screenWidth = UIParent:GetWidth()
 local columns = math.floor(screenWidth / PIXEL_SIZE)
