@@ -1,13 +1,14 @@
 pixels = {
+
     {
-        name = "1. Health",
+        name = "2. Health",
         color = function()
             local healthPct = UnitHealth("player") / UnitHealthMax("player")
             return to_color(healthPct * 100)
         end,
     },
     {
-        name = "2. Mana",
+        name = "3. Mana",
         color = function()
             local max = UnitPowerMax("player")
             local curr = UnitPower("player")
@@ -16,115 +17,115 @@ pixels = {
         end,
     },
     {
-        name = "3. TargetHealth",
+        name = "4. TargetHealth",
         color = function()
             return to_color(GetTargetHealthPct())
         end,
     },
     {
-        name = "4. Range",
+        name = "5. Range",
         color = function()
             return to_color(isInRange())
         end,
     },
     {
-        name = "5. Combat",
+        name = "6. Combat",
         color = function()
             return to_color(CombatStatus())
         end,
     },
     {
-        name = "6. Brain Freeze",
+        name = "7. Brain Freeze",
         color = function()
             return to_color(GetBuffs("Brain Freeze"))
         end,
     },
     {
-        name = "7. Fingers of Frost",
+        name = "8. Fingers of Frost",
         color = function()
             return to_color(GetBuffs("Fingers of Frost"))
         end,
     },
     {
-        name = "8. Slot 1",
+        name = "9. Slot 1",
         color = function()
             return to_color(SpellReady(1))
         end,
     },
     {
-        name = "9. Slot 2",
+        name = "10. Slot 2",
         color = function()
             return to_color(SpellReady(2))
         end,
     },
     {
-        name = "10. Slot 3",
+        name = "11. Slot 3",
         color = function()
             return to_color(SpellReady(3))
         end,
     },
     {
-        name = "11. Slot 4",
+        name = "12. Slot 4",
         color = function()
             return to_color(SpellReady(4))
         end,
     },
     {
-        name = "12. Slot 5",
+        name = "13. Slot 5",
         color = function()
             return to_color(SpellReady(5))
         end,
     },
     {
-        name = "13. Slot 6",
+        name = "14. Slot 6",
         color = function()
             return to_color(SpellReady(6))
         end,
     },
     {
-        name = "14. Slot 7",
+        name = "15. Slot 7",
         color = function()
             return to_color(SpellReady(7))
         end,
     },
     {
-        name = "15. Slot 8",
+        name = "16. Slot 8",
         color = function()
             return to_color(SpellReady(8))
         end,
     },
     {
-        name = "16. Slot 9",
+        name = "17. Slot 9",
         color = function()
             return to_color(SpellReady(9))
         end,
     },
     {
-        name = "17. Slot 10",
+        name = "18. Slot 10",
         color = function()
             return to_color(SpellReady(10))
         end,
     },
     {
-        name = "18. Slot 11",
+        name = "19. Slot 11",
         color = function()
             return to_color(SpellReady(11))
         end,
     },
     {
-        name = "19. Slot 12",
+        name = "20. Slot 12",
         color = function()
             return to_color(SpellReady(12))
         end,
     },
     {
-        name = "20. Target Debuff Winter's Chill",
+        name = "21. Target Debuff Winter's Chill",
         color = function()
             return to_color(GetDebuff("Winter's Chill"))
         end,
     },
     {
-        name = "21. Dead check",
+        name = "22. Dead check",
         color = function()
             return to_color(IsTargetDead("target"))
         end,

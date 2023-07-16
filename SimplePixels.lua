@@ -92,8 +92,8 @@ function GetSpellColors()
     -- compute pixels count color and insert it as the first element
     local pixelsCountColor = to_color(#pixels)
     print(#pixels)
-    table.insert(pixels, {
-      name = "0. Count",
+    table.insert(pixels, 1,{
+      name = "1. Count",
       color = function() return pixelsCountColor end,
     })
   
